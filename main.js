@@ -12,15 +12,6 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord)
 })
 
-mongoose.connect(process.env.MONGODB_SRV, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    userFindAndModify: false
-}).then(()=>{
-    console.log('Povezao sam se sa databazom!');
-}).catch((err) =>{
-    console.log(err);
-})
 
 
 
